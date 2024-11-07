@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Brewed Awakening</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styling */
+        body {
+            background-color: #f4f4f4;
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+            color: #333;
+            margin: 0;
+        }
+
+        /* Fluid Container */
+        .container-fluid {
+            width: 100%;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+
+        /* Navigation */
+        nav {
+            padding: 1rem 0;
+            background-color: #262626;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav strong {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: #ff7b54;
+            font-family: 'Playfair Display', serif;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul li a {
+            color: white;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ff7b54;
+        }
+
+        /* Hero Section */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-image: url('https://files.oaiusercontent.com/file-oXIAk4kzldQmclBdoSpwuK6z?se=2024-11-07T17%3A34%3A30Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D1eef43a0-bb28-491d-b03a-54aea2ace36f.webp&sig=cuQPt5HE%2B1TlltxpDvLAVTvS10MLBuM/4gd1EfU6TDw%3D');
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
+            color: white;
+            padding: 2rem;
+            position: relative;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        header::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            z-index: 2;
+            position: relative;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 1rem;
+            font-weight: 400;
+            z-index: 2;
+            position: relative;
+        }
+
+        /* Section Styling */
+        .container {
+            padding: 4rem 1rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 2.5rem;
+            color: #333;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        p {
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: #ff7b54;
+            color: white;
+            font-weight: 600;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #e66a3d;
+        }
+
+        /* Divider Section */
+        .divider {
+            background: #ff7b54;
+            height: 4px;
+            width: 100%;
+            margin: 2rem 0;
+        }
+
+        /* Image Hover Effect */
+        figure img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.5s ease, filter 0.5s ease;
+        }
+
+        figure img:hover {
+            transform: scale(1.05);
+            filter: brightness(0.9);
+        }
+
+        /* Subscription Section */
+        section[aria-label="Subscribe for updates"] {
+            background-color: #262626;
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        section[aria-label="Subscribe for updates"] h2 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .subscription-form input, .subscription-form button {
+            width: 100%;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border-radius: 5px;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .subscription-form input {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .subscription-form button {
+            background-color: #ff7b54;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .subscription-form button:hover {
+            background-color: #e66a3d;
+        }
+
+        /* Footer Styling */
+        footer {
+            padding: 1.5rem 0;
+            text-align: center;
+            background-color: #333;
+            color: #f4f4f4;
+            font-size: 0.9rem;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="container-fluid">
+        <ul>
+            <li><strong>Brewed Awakening</strong></li>
+        </ul>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#" role="button" class="cta-button">Order Now</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header>
+        <h1>Brewed Awakening</h1>
+        <p>Experience the finest coffee in town</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="divider"></div>
+        <h2>About Us</h2>
+        <p>At Brewed Awakening, we believe in the magic of a perfect cup of coffee. Located in the heart of the city, we offer a welcoming space for coffee lovers, students, and remote workers alike.</p>
+        <figure>
+            <img src="https://files.oaiusercontent.com/file-oXIAk4kzldQmclBdoSpwuK6z?se=2024-11-07T17%3A34%3A30Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D1eef43a0-bb28-491d-b03a-54aea2ace36f.webp&sig=cuQPt5HE%2B1TlltxpDvLAVTvS10MLBuM/4gd1EfU6TDw%3D" alt="Cozy Cafe Interior">
+        </figure>
+        <div class="divider"></div>
+    </main>
+
+    <!-- Subscription Section -->
+    <section aria-label="Subscribe for updates">
+        <h2>Stay Updated</h2>
+        <form class="subscription-form">
+            <input type="text" placeholder="First Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <small><a href="#">Privacy Policy</a> • <a href="#">Contact Us</a></small>
+    </footer>
+
+</body>
+</html>
+``

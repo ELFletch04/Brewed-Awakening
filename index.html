@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Brewed Awakening</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- External CSS file -->
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="container-fluid">
+        <ul>
+            <li><strong>Brewed Awakening</strong></li>
+        </ul>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#menu">Menu</a></li> <!-- Link to the Menu section -->
+            <li><a href="#" role="button" class="cta-button">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header>
+        <h1>Brewed Awakening</h1>
+        <p>Experience the finest coffee in town</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="divider"></div>
+        <h2>About Us</h2>
+        <p>At Brewed Awakening, we believe in the magic of a perfect cup of coffee. Located in the heart of the city, we offer a welcoming space for coffee lovers, students, and remote workers alike. Our mission is to create a place where everyone feels at home, whether you're here for a quick pick-me-up or to spend hours working away on your next big idea.</p>
+        
+        <p>Our coffee is carefully sourced from the finest beans, ensuring every cup is brewed to perfection. Whether you prefer a classic espresso, a smooth latte, or something more adventurous, our baristas are dedicated to crafting the perfect beverage for you. We also offer a selection of freshly baked pastries and light snacks, all made with love and quality ingredients.</p>
+
+        <p>The ambiance at Brewed Awakening is designed to inspire. With comfortable seating, cozy nooks, and plenty of natural light, our coffee shop serves as a retreat from the hustle and bustle of daily life. Whether you're meeting friends for a chat or working on your latest project, our space is designed to foster creativity and connection.</p>
+        
+        <p>We take pride in being more than just a coffee shop; we're a community hub. From local events and live music performances to book clubs and creative workshops, there's always something happening here. We believe in the power of a good conversation and the joy of sharing a cup of coffee with friends, old and new.</p>
+
+        <figure>
+            <img src="media/cozy.jpg" alt="Cozy Cafe Interior">
+        </figure>
+        <div class="divider"id="menu"></div>
+
+        <!-- Menu Section -->
+        <section  class="menu-section">
+            <h2>Our Menu</h2>
+            <p>At Brewed Awakening, we offer a carefully curated selection of beverages and light bites that will satisfy every taste. From our signature espresso drinks to seasonal specials, there's something for everyone. Here's a look at some of our most popular items:</p>
+        
+            <ul class="menu-items">
+                <li class="menu-item">
+                    <span class="menu-name">Espresso</span>
+                    <span class="menu-price">£2.50</span>
+                </li>
+                <li class="menu-item">
+                    <span class="menu-name">Latte</span>
+                    <span class="menu-price">£3.00</span>
+                </li>
+                <li class="menu-item">
+                    <span class="menu-name">Cappuccino</span>
+                    <span class="menu-price">£3.20</span>
+                </li>
+                <li class="menu-item">
+                    <span class="menu-name">Iced Coffee</span>
+                    <span class="menu-price">£3.50</span>
+                </li>
+                <li class="menu-item">
+                    <span class="menu-name">Pastries</span>
+                    <span class="menu-price">£2.00 - £2.50</span>
+                </li>
+                <li class="menu-item">
+                    <span class="menu-name">Seasonal Specials</span>
+                    <span class="menu-price">Ask for pricing</span>
+                </li>
+            </ul>
+        
+            <p>We also offer vegan and gluten-free options to cater to every dietary need.</p>
+        </section>
+        
+        
+    </main>
+
+    <!-- Subscription Section -->
+    <section aria-label="Subscribe for updates">
+        <h2>Stay Updated</h2>
+        <form id="subscription-form" class="subscription-form">
+            <input type="text" id="first-name" placeholder="First Name" required>
+            <input type="email" id="email" placeholder="Email Address" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <small><a href="#">Privacy Policy</a> • <a href="#">Contact Us</a></small>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
