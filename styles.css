@@ -16,21 +16,19 @@ body {
     max-width: 100%;
 }
 
-/* Navigation */
+/* Navigation Bar */
 nav {
     padding: 1rem 0;
     background-color: #262626;
     color: white;
-    position: sticky;
-    top: 0;
-    z-index: 10;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; /* Ensures items wrap if needed */
 }
 
 nav strong {
-    font-size: 1.8em;
+    font-size: 1.6rem; /* Slightly smaller logo font */
     font-weight: 700;
     color: #ff7b54;
     font-family: 'Playfair Display', serif;
@@ -38,21 +36,19 @@ nav strong {
 
 nav ul {
     list-style-type: none;
+    display: flex;
     padding: 0;
     margin: 0;
-}
-
-nav ul.nav-links {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    gap: 1rem; /* Horizontal spacing between menu items */
+    align-items: center; /* Center items vertically */
 }
 
 nav ul li {
-    margin-left: 2rem;
+    margin: 0;
 }
 
 nav ul li a {
+    font-size: 0.9rem; /* Smaller text for menu items */
     color: white;
     font-weight: 600;
     transition: color 0.3s ease;
@@ -123,7 +119,7 @@ h2 {
 
 p {
     line-height: 1.7;
-    color:grey;
+    color: grey;
 }
 
 .cta-button {
@@ -158,7 +154,6 @@ figure img {
 }
 
 figure img:hover {
-    
     filter: brightness(0.9);
 }
 
@@ -209,9 +204,11 @@ footer {
     color: #f4f4f4;
     font-size: 0.9rem;
 }
+
 html {
     scroll-behavior: smooth;
 }
+
 /* Menu Section Styling */
 .menu-section {
     padding: 4rem 1rem;
@@ -275,4 +272,19 @@ html {
 
 .menu-item:hover .menu-price {
     color: #fff;
+}
+
+/* Responsive Navigation for Smaller Screens */
+@media (max-width: 768px) {
+    nav ul {
+        justify-content: center; /* Center the menu items on smaller screens */
+    }
+
+    nav strong {
+        font-size: 1.4rem; /* Reduce logo size further for small screens */
+    }
+
+    nav ul li a {
+        font-size: 0.8rem; /* Further reduce font size for smaller screens */
+    }
 }
